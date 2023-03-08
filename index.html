@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+    <title>Music Player</title>
+  </head>
+  <body>
+
+
+    <script src="artists.json"></script>
+    <script src="genres.json"></script>
+    <script>
+        const art = JSON.parse(artists);
+        const gen = JSON.parse(genres);</script>
+        <div id="credits">Team Members:<br/>Member 1<br/>Member 2<br/>
+          GitHub Link:<br/>Link </div>   <!--Member and team member names-->
+        
+    <div class="flex-container" id="browse">   
+
+      <header>
+        <nav class="topnav">
+                <li><a href="#" onclick="radarChart('playlist','browse'); show(data,'play');">Playlist</a></li>
+          <li><a href="#" onclick="snackbar_org();">Credits</a></li>
+            </nav>
+            
+      </header>
+
+        <div class="song-search">
+          <h2 id="search">Basic Song Search</h2>
+          <form>
+          <input type="radio" id="t" name="opt" value="title" checked onclick="disable()"/><span id="f1">Title</span><input type="text" name="title" maxlength="50" size="20px" id="title"/></br>
+	        <input type="radio" id="ar" name="opt" value="artist" onclick="disable()"/><span id="f2">Artist</span><input type="text" name="artist" maxlength="50" size="20px" id="artist"/></br>
+	        <input type="radio" id="g" name="opt" value="genre" onclick="disable()"/><span id="f3">Genre</span><input type="text" name="genre" maxlength="50" size="20px" id="genre"/></br>
+          <button id="clear" class="add" type="button" onclick="removeFilter()">Clear</button>
+          <button id="filter" class="add" type="button" onclick="songFilter()">Filter</button>
+          </form>
+        </div>
+
+<div class="productRecord">
+    <div class="productNames">
+      <h3 class="thHead" id="tit">Title</h3>
+      <h3 class="thHead" id="art">Artist</h3>
+      <h3 class="thHead" id="year">Year</h3>
+      <h3 class="thHead" id="gen">Genre</h3>
+      <h3 class="thHead" id="popularity">Popularity</h3>
+      <input type="button" class="add" value="ADD"/>
+    </div>
+    <div class="d-flex justify-content-center">
+    <div class="spinner-border" 
+                 role="status" id="loading">
+                <span class="sr-only">Loading...</span></div></div>
+    <table id="ProductSpace"></table>
+</div></div> 
+<div id="snackbar">Songs Added to the Playlist...</div>
+<div id="singleSong" class="flex-container" style="display:none">
+    <header>
+      <nav class="topnav">
+              <li><a href="#" onclick="return radarChart('browse','singleSong');">Close View</a></li>
+              <li><a href="#" onclick="snackbar_org();">Credits</a></li>
+            </nav>
+          
+    </header>
+    <div class="song-search">
+      <h2 id="search">Song Information</h2>
+      <div id="info"></div>
+    </div>
+    <div class="productRecord">
+<canvas id="radarChart" width="1000" height="400"></canvas></div>
+</div>
+
+
+<div id="playlist" class="flex-container"  style="display:none">
+  <header>
+    <nav class="topnav">
+      <li><a href="#" onclick="return radarChart('browse','playlist');">Close View</a></li>
+      <li><a href="#" onclick="snackbar_org();">Credits</a></li>
+    </nav>
+        
+  </header>
+
+  <div class="song-search" id="playlistInfo"></div>
+
+
+<div class="productRecord">
+<div class="productNames">
+  <h3 class="thHead" id="tit">Title</h3>
+  <h3 class="thHead" id="art">Artist</h3>
+  <h3 class="thHead" id="year">Year</h3>
+  <h3 class="thHead" id="gen">Genre</h3>
+  <h3 class="thHead" id="popularity">Popularity</h3>
+  <input type="button" class="add" id='removeAdd' value="CLEAR" onclick="clear1()"/>
+</div>
+<table id="play"></table>
+</div>
+</div>
+
+
+
+
+<footer>
+    <br><br>
+    <p style="text-align:center;">©2022 MUSIC PLAYER</p>
+    
+    </footer>
+    <script type="text/javascript" src="index.js" async></script>
+  </body>
+</html>

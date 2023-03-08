@@ -1,0 +1,349 @@
+*{
+	background-color:#e0e0d1;
+   font-family:arial;
+   color: black;
+}
+
+input:disabled {
+    background-color: grey !important;
+}
+
+.top{
+	margin-left: 250px;
+	background-color: #DC143C;
+}
+.type{
+	background-color: #e0e0d1;
+}
+h2{
+	text-align: center;
+}
+.h{
+	border:2px white solid;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: white;
+	color:#DC143C;
+}
+a{
+	background-color: #DC143C;
+	padding: 14px;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+nav{
+	background-color:#DC143C;
+	width: 1348px;
+	height:64px;
+   margin-top: -10px;
+   margin-left:-10px;
+   text-align:right;
+   padding:10px;
+   }
+.logo{
+	color: white;
+	background-color: #DC143C; 
+    font-size:30px;
+    float: left;
+    margin-top:-1px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+li{
+	display: inline-block;
+	margin-top: -1px;
+}
+.product{
+	display:inline-block;
+	border:2px black;
+	size:300px;
+	padding: 40px;
+}
+
+.names{
+	color: black;
+}
+img{
+	border-radius: 10px;
+	border-color:2px #DC143C solid;
+	width:300px;
+	height: 300px;
+}
+
+
+.add{
+	padding: 20px;
+	background-color: #DC143C;
+    color:white;
+    border-radius: 2px;
+    margin-left:20px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#tit{
+	padding-right: 265px;
+	display: inline-block;
+	padding-left: 20px;
+}
+
+#art,#year,#popularity{
+	display: inline-block;
+	padding-left: 45px; 
+}
+
+
+#year{
+	padding-left: 90px;
+}
+
+#gen{
+	padding-left:45px;
+	display: inline-block;
+}
+
+
+#titleHead{
+	background-color: #e0e0d1; 
+    color:black;
+	font-size: 16px;
+	font-weight: bold;
+	font-family:arial;
+}
+
+.names{
+	display: inline-block;
+	margin-left: 120px;
+	width: 200px;
+	margin-top: 10px;
+	padding-bottom: 30px;
+}
+
+.totall{
+	display: inline;
+	margin-left: 100px;
+}
+
+.types{
+	margin-top: 20px;
+}
+.type{
+	display: inline-block;
+}
+footer{
+	 background-color:#DC143C;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     height: 60px;
+   margin-left:-10px;
+   text-align:left;
+   padding:10px;
+   color:white;
+}
+p{
+	background-color: #DC143C;
+	color:white;
+	float: bottom;
+}
+a{
+	padding-top: 0;
+	margin-top:0;
+}
+.button{
+   background-color:black; 
+   color:white; 
+   padding:10px;
+   border-color:black; 
+   font-size:20px;
+}
+
+
+.productRecord{
+	overflow-y: scroll;
+}
+
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .song-search {
+	flex: 25%;
+	border-right: 2px solid #DC143C;
+	padding-left: 10px;
+	overflow:hidden;
+  }
+  
+  .productRecord {
+	flex: 70%;
+	overflow:auto;
+	height:500px;
+  }
+  
+  @media (max-width: 800px) {
+	.song-search {
+	  flex: 25%;
+	}
+	.productRecord {
+		flex: 70%;
+	  }
+	  #title,#artist,#genre{
+		width:50%;
+	  }
+	  .topnav{
+		width:800px;
+	  }
+
+	  #tit{
+		padding-right: 30px; 
+	  }
+	  .thHead{
+		font-size: 11px;
+	  }
+
+  }
+
+  @media (max-width: 1326px) {
+	
+	.topnav{
+	  width:800px;
+	}
+	.song-search {
+	  flex: 25%;
+	}
+	.productRecord {
+		flex: 70%;
+		height:450px;
+	  }
+	
+}
+
+
+  @media (max-width: 1920px) {
+	
+	  .topnav{
+		width:1900px;
+	  }
+	  .song-search {
+		flex: 25%;
+	  }
+	  .productRecord {
+		  flex: 70%;
+		  height:980px;
+		}
+		form{
+		   margin: auto;
+		   text-align: center;
+		}
+  }
+
+  input{
+	font-size: 22px;
+	background-color: #B8B8B8;
+    border:none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-left:10px;
+}
+
+#clear,#filter{
+	margin-left: 30px;
+padding-left: 40px;
+margin-right: 20px;
+padding-right: 40px;
+}
+
+#title{
+margin-left: 25px;
+}
+
+#artist{
+	margin-left: 18px;
+	}
+
+	#snackbar,#credits {
+		visibility: hidden;
+		min-width: 250px;
+		margin-left: -125px;
+		background-color: rgba(51, 51, 51, 0.808);
+		color: #fff;
+		text-align: center;
+		border-radius: 2px;
+		padding: 16px;
+		position: fixed;
+		z-index: 1;
+		left: 50%;
+		bottom: 30px;
+		font-size: 17px;
+	  }
+	  
+	  #snackbar.show,#credits.show {
+		visibility: visible;
+		-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	  }
+	  
+	  @-webkit-keyframes fadein {
+		from {bottom: 0; opacity: 0;} 
+		to {bottom: 30px; opacity: 1;}
+	  }
+	  
+	  @keyframes fadein {
+		from {bottom: 0; opacity: 0;}
+		to {bottom: 30px; opacity: 1;}
+	  }
+	  
+	  @-webkit-keyframes fadeout {
+		from {bottom: 30px; opacity: 1;} 
+		to {bottom: 0; opacity: 0;}
+	  }
+	  
+	  @keyframes fadeout {
+		from {bottom: 30px; opacity: 1;}
+		to {bottom: 0; opacity: 0;}
+	  }
+
+	.select{
+		background-color: #DC143C;
+    color:white;
+    border-radius: 2px;
+	}
+
+	.ProductSpace{
+		table-layout: fixed;
+	}
+
+	canvas {
+		max-height: 100%;
+	  }
+
+	  #removeAdd{
+		margin-left:50px;
+	  }
+
+	  #infoPlay,#info{
+		width: 320px;
+		padding: 10px;
+		border: 5px solid rgb(218, 10, 10);
+        color:rgb(133, 72, 72);
+		font-weight: bold;
+		margin: 0;
+		font-family: Helvetica;
+		background-color: rgba(200,0,0,0.2);
+		box-shadow: rgba(218, 10, 10, 0.363) 0px 2px 4px, rgba(218, 10, 10, 0.589) 0px 7px 13px -3px, rgb(218, 10, 10) 0px -3px 0px inset;
+	  }
+
+	  .data{
+		color:rgb(133, 72, 72);
+		font-weight: bold;
+		font-family: Helvetica;
+		background-color: transparent;
+	  }
+
+	  #analysis{
+		color:rgba(201, 44, 44, 0.76);
+	  }
